@@ -1,6 +1,10 @@
+/*TODO: Opportunities to make this code better: 
+1-Install eslint.
+2-See if prettier makes some of the code look better.
+*/
 const fetch = require('node-fetch');
 const assert = require('chai').should();
-const baseURL = 'http://localhost:3000/tasks'
+const baseURL = 'http://localhost:3000/tasks' //TODO: what happens if you want to test this in different environments?
 
 const loadTask = async (task) => {
     const response = await fetch(`${baseURL}`, {
@@ -21,6 +25,8 @@ describe('Tasks API Test Suite', () => {
     beforeEach(async () => {
         cleanAllTasks()
     })
+
+    //TODO: Again, there is repetition in it with GET. Same happens with some DELETE.
 
     it('Add one task', async () => {
         const task1 = { title: "Test Title3", description: "Test description" }
