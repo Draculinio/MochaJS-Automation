@@ -1,5 +1,6 @@
 const fetch = require('node-fetch');
 const assert = require('chai').should(); //TODO: This is never used.
+//TODO: What if need to test in different environments?
 const baseURL = 'http://api.mathjs.org/v4/?'
 
 describe('Math API Test Suite', () => {
